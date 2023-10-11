@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  Splash.swift
 //  2023 iOS - Term 4
 //
 //  Created by Shiro NoKage on 2023/10/04.
@@ -7,20 +7,23 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct Splash: View {
+    @State private var isActive = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, worlds!")
+        ZStack{
+            Color("AccentColor")
+                .ignoresSafeArea()
+            Image("Icon")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 100, height: 100)
+                .padding()
         }
-        .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Splash_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Splash()
     }
 }

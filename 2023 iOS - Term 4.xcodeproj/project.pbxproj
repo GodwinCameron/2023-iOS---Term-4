@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D651F59A2ACCFBE500741729 /* _023_iOS___Term_4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651F5992ACCFBE500741729 /* _023_iOS___Term_4App.swift */; };
+		D651F59A2ACCFBE500741729 /* League Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651F5992ACCFBE500741729 /* League Items.swift */; };
 		D651F59C2ACCFBE500741729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651F59B2ACCFBE500741729 /* ContentView.swift */; };
 		D651F59E2ACCFBEC00741729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D651F59D2ACCFBEC00741729 /* Assets.xcassets */; };
 		D651F5A12ACCFBEC00741729 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D651F5A02ACCFBEC00741729 /* Preview Assets.xcassets */; };
+		D684E7C52AD6B19900EC2F3B /* ItemScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D684E7C42AD6B19900EC2F3B /* ItemScene.swift */; };
+		D684E7C72AD6B82600EC2F3B /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D684E7C62AD6B82600EC2F3B /* ListItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D651F5962ACCFBE500741729 /* 2023 iOS - Term 4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2023 iOS - Term 4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D651F5992ACCFBE500741729 /* _023_iOS___Term_4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_023_iOS___Term_4App.swift"; sourceTree = "<group>"; };
+		D651F5962ACCFBE500741729 /* League Items.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "League Items.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D651F5992ACCFBE500741729 /* League Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "League Items.swift"; sourceTree = "<group>"; };
 		D651F59B2ACCFBE500741729 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D651F59D2ACCFBEC00741729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D651F5A02ACCFBEC00741729 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D684E7C42AD6B19900EC2F3B /* ItemScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemScene.swift; sourceTree = "<group>"; };
+		D684E7C62AD6B82600EC2F3B /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +47,7 @@
 		D651F5972ACCFBE500741729 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D651F5962ACCFBE500741729 /* 2023 iOS - Term 4.app */,
+				D651F5962ACCFBE500741729 /* League Items.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,7 +55,11 @@
 		D651F5982ACCFBE500741729 /* 2023 iOS - Term 4 */ = {
 			isa = PBXGroup;
 			children = (
-				D651F5992ACCFBE500741729 /* _023_iOS___Term_4App.swift */,
+				D684E7C32AD6B17600EC2F3B /* Scenes */,
+				D684E7C22AD6B17000EC2F3B /* Views */,
+				D684E7C12AD6B16900EC2F3B /* Models */,
+				D684E7C02AD6B16300EC2F3B /* Data */,
+				D651F5992ACCFBE500741729 /* League Items.swift */,
 				D651F59B2ACCFBE500741729 /* ContentView.swift */,
 				D651F59D2ACCFBEC00741729 /* Assets.xcassets */,
 				D651F59F2ACCFBEC00741729 /* Preview Content */,
@@ -67,12 +75,42 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D684E7C02AD6B16300EC2F3B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D684E7C12AD6B16900EC2F3B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D684E7C22AD6B17000EC2F3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D684E7C62AD6B82600EC2F3B /* ListItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D684E7C32AD6B17600EC2F3B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D684E7C42AD6B19900EC2F3B /* ItemScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D651F5952ACCFBE500741729 /* 2023 iOS - Term 4 */ = {
+		D651F5952ACCFBE500741729 /* League Items */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D651F5A42ACCFBEC00741729 /* Build configuration list for PBXNativeTarget "2023 iOS - Term 4" */;
+			buildConfigurationList = D651F5A42ACCFBEC00741729 /* Build configuration list for PBXNativeTarget "League Items" */;
 			buildPhases = (
 				D651F5922ACCFBE500741729 /* Sources */,
 				D651F5932ACCFBE500741729 /* Frameworks */,
@@ -82,9 +120,9 @@
 			);
 			dependencies = (
 			);
-			name = "2023 iOS - Term 4";
+			name = "League Items";
 			productName = "2023 iOS - Term 4";
-			productReference = D651F5962ACCFBE500741729 /* 2023 iOS - Term 4.app */;
+			productReference = D651F5962ACCFBE500741729 /* League Items.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -115,7 +153,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D651F5952ACCFBE500741729 /* 2023 iOS - Term 4 */,
+				D651F5952ACCFBE500741729 /* League Items */,
 			);
 		};
 /* End PBXProject section */
@@ -138,7 +176,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D651F59C2ACCFBE500741729 /* ContentView.swift in Sources */,
-				D651F59A2ACCFBE500741729 /* _023_iOS___Term_4App.swift in Sources */,
+				D684E7C52AD6B19900EC2F3B /* ItemScene.swift in Sources */,
+				D651F59A2ACCFBE500741729 /* League Items.swift in Sources */,
+				D684E7C72AD6B82600EC2F3B /* ListItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +367,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D651F5A42ACCFBEC00741729 /* Build configuration list for PBXNativeTarget "2023 iOS - Term 4" */ = {
+		D651F5A42ACCFBEC00741729 /* Build configuration list for PBXNativeTarget "League Items" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D651F5A52ACCFBEC00741729 /* Debug */,
