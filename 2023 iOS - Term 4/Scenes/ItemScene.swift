@@ -9,21 +9,29 @@ import SwiftUI
 
 struct ItemScene: View {
     var body: some View {
-        ZStack{
-            Color("AccentColor")
-                .ignoresSafeArea()
-            VStack{
-                Text("All Items:")
-                    .foregroundColor(.white)
-                ListItemView()
-                ListItemView()
-                ListItemView()
-                ListItemView()
-                
-                Spacer()
+            NavigationView{
+                ZStack{
+                    Color("AccentColor")
+                        .ignoresSafeArea()
+                    VStack{
+                        Text("All Items:")
+                            .foregroundColor(.white)
+                        ListItemView()
+                        ListItemView()
+                        ListItemView()
+                        ListItemView()
+                        
+                        Spacer()
+                    }
+                }
+//                .navigationTitle("All Items")
+                .navigationBarTitleDisplayMode(.inline)
             }
-        }
+            
+            .background(Color.blue)
+                    .edgesIgnoringSafeArea(.all)
     }
+        
 }
 
 struct ItemScene_Previews: PreviewProvider {
