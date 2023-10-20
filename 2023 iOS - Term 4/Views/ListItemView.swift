@@ -8,42 +8,45 @@
 import SwiftUI
 
 struct ListItemView: View {
+    var item: Item
     var body: some View {
         HStack{
-            Image("TestImage")
+            Image(item.icon)
+                .resizable()
+                .frame(width: 60, height: 60)
                 Spacer()
             VStack{
-                Text("Blood Thirster")
+                Text(item.name)
                     .foregroundColor(.white)
-                    .font(.system(size: 18))
+                    .font(.system(size: 14))
                     
                 HStack{
                     Image("GoldIcon")
                         .resizable()
                         .frame(width: 12, height: 12)
-                        Text("3400")
+                    Text("\(item.cost)")
                         .foregroundColor(Color("Gold2"))
                 }
             }
             Spacer()
             VStack{
-                Text("Legendary Item")
+                Text("\(item.type) Item")
                             .font(.system(size: 9))
                             .foregroundColor(.white)
                             .padding(.bottom, 2)
-                Text("55 Attack Damage")
+                Text("\(item.stats[0].stat)")
                     .font(.system(size: 7))
                     .foregroundColor(Color("BlueDetail"))
-                Text("20% Critical Strike")
+                Text("\(item.stats[1].stat)")
                     .font(.system(size: 7))
                     .foregroundColor(Color("BlueDetail"))
-                Text("18% Life Steal")
+                Text("\(item.stats[2].stat)")
                     .font(.system(size: 7))
                     .foregroundColor(Color("BlueDetail"))
                 
             }
             Spacer()
-                NavigationLink(destination: IndividualItemScene()){
+            NavigationLink(destination: IndividualItemScene(item: item)){
                     Text("Read More")
                         .foregroundColor(Color.white)
                         .font(.system(size: 10))
@@ -66,8 +69,8 @@ struct ListItemView: View {
     }
 }
 
-struct ListItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListItemView()
-    }
-}
+//struct ListItemView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ListItemView()
+//    }
+//}

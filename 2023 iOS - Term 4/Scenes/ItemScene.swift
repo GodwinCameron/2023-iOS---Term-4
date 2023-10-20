@@ -13,25 +13,24 @@ struct ItemScene: View {
                 ZStack{
                     Color("AccentColor")
                         .ignoresSafeArea()
-                    VStack{
+                    VStack(alignment: .leading){
                         Text("All Items:")
+                            .bold()
                             .foregroundColor(.white)
-                        ListItemView()
-                        ListItemView()
-                        ListItemView()
-                        ListItemView()
+                            .font(.title)
+                        ForEach(ItemData) { item in
+                            ListItemView(item: item)
+                                            }
                         
                         Spacer()
+                            .padding(.vertical)
                     }
                 }
-//                .navigationTitle("All Items")
-                .navigationBarTitleDisplayMode(.inline)
+                .accentColor(.white)
             }
-            
-            .background(Color.blue)
-                    .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.all)
     }
-        
+
 }
 
 struct ItemScene_Previews: PreviewProvider {

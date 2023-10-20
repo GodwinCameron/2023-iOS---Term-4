@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct IndividualItemScene: View {
+    @Environment(\.presentationMode) var presentationMode
     
-    var item : Item = dummyItem2
+//    var item : Item
+    var item : Item = dummyItem
     
     var body: some View {
         ZStack{
             Color("AccentColor")
                 .ignoresSafeArea()
             VStack{
-                Text("Item - \(item.name)")
+                Text("\(item.name)")
                     .font(.title3)
                 VStack(alignment: .leading){
                     HStack(alignment: .top){
@@ -81,14 +83,18 @@ struct IndividualItemScene: View {
                         .padding(.horizontal)
                         .padding(.vertical,1)
                         VStack(alignment: .leading){
-                            Text("Unique Passive:")
+                            Text("Unique Passives:")
                             VStack(alignment: .leading){
-                                HStack(alignment: .top){
-                                    Text("• ")
-                                    Text(item.uniquePassive)
-                                        .foregroundColor(Color("Gold2"))
-                                    Text(": \(item.uniquePassiveEffect)")
+                                ForEach(item.uniquePassive) { passive in
+                                    HStack(alignment: .top){
+                                        Text("• ")
+                                        Text(passive.name)
+                                            .foregroundColor(Color("Gold2"))
+                                        Text(": \(passive.passive)")
+                                            
+                                    }.padding(.vertical,2)
                                 }
+                                
                             }
                         }
                         .padding(.horizontal)
@@ -129,8 +135,22 @@ struct IndividualItemScene: View {
             }
             
             
+            
         }
         .foregroundColor(Color.white)
+        .navigationBarBackButtonHidden(true)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button(action: {
+                                presentationMode.wrappedValue.dismiss()
+                            }) {
+                                Image(systemName: "chevron.left")
+                                    .foregroundColor(.white)
+                                Text("All Items")
+                                    .foregroundColor(.white)
+                            }
+                        }
+                    }
     }
 }
 

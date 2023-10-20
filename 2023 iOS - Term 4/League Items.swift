@@ -10,8 +10,8 @@ import SwiftUI
 struct _2023_iOS_Term4: App {
     var body: some Scene {
         WindowGroup {
-//            Splash()
-            ItemScene()
+            Splash()
+//            ItemScene()
                 }
     }
 }
