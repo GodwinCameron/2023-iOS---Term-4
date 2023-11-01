@@ -19,6 +19,10 @@
 		D68971912ADF772900D58243 /* ItemSpikesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68971902ADF772900D58243 /* ItemSpikesModel.swift */; };
 		D68CC2B52AE2FC7B001163DF /* ItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CC2B42AE2FC7B001163DF /* ItemData.swift */; };
 		D68CC2B72AE2FF0F001163DF /* ItemPassive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CC2B62AE2FF0F001163DF /* ItemPassive.swift */; };
+		D6F4B98D2AF2B1A000B9832E /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F4B98C2AF2B1A000B9832E /* OnboardingCardView.swift */; };
+		D6F4B98F2AF2B3D400B9832E /* OnboardingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F4B98E2AF2B3D400B9832E /* OnboardingScene.swift */; };
+		D6F4B9912AF2B81200B9832E /* OnboardingCardViewNoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F4B9902AF2B81200B9832E /* OnboardingCardViewNoImage.swift */; };
+		D6F4B9932AF2C12800B9832E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F4B9922AF2C12800B9832E /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		D68971902ADF772900D58243 /* ItemSpikesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSpikesModel.swift; sourceTree = "<group>"; };
 		D68CC2B42AE2FC7B001163DF /* ItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemData.swift; sourceTree = "<group>"; };
 		D68CC2B62AE2FF0F001163DF /* ItemPassive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPassive.swift; sourceTree = "<group>"; };
+		D6F4B98C2AF2B1A000B9832E /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
+		D6F4B98E2AF2B3D400B9832E /* OnboardingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScene.swift; sourceTree = "<group>"; };
+		D6F4B9902AF2B81200B9832E /* OnboardingCardViewNoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardViewNoImage.swift; sourceTree = "<group>"; };
+		D6F4B9922AF2C12800B9832E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				D684E7C62AD6B82600EC2F3B /* ListItemView.swift */,
+				D6F4B98C2AF2B1A000B9832E /* OnboardingCardView.swift */,
+				D6F4B9902AF2B81200B9832E /* OnboardingCardViewNoImage.swift */,
+				D6F4B9922AF2C12800B9832E /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,6 +130,7 @@
 			children = (
 				D684E7C42AD6B19900EC2F3B /* ItemScene.swift */,
 				D689718A2ADEEA1800D58243 /* IndividualItemScene.swift */,
+				D6F4B98E2AF2B3D400B9832E /* OnboardingScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -194,13 +206,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D68CC2B52AE2FC7B001163DF /* ItemData.swift in Sources */,
+				D6F4B98D2AF2B1A000B9832E /* OnboardingCardView.swift in Sources */,
 				D689718D2ADF75AD00D58243 /* ItemModel.swift in Sources */,
 				D689718F2ADF765000D58243 /* ItemStatsModel.swift in Sources */,
+				D6F4B9912AF2B81200B9832E /* OnboardingCardViewNoImage.swift in Sources */,
 				D651F59C2ACCFBE500741729 /* Splash.swift in Sources */,
 				D68CC2B72AE2FF0F001163DF /* ItemPassive.swift in Sources */,
+				D6F4B9932AF2C12800B9832E /* SettingsView.swift in Sources */,
 				D684E7C52AD6B19900EC2F3B /* ItemScene.swift in Sources */,
 				D689718B2ADEEA1800D58243 /* IndividualItemScene.swift in Sources */,
 				D651F59A2ACCFBE500741729 /* League Items.swift in Sources */,
+				D6F4B98F2AF2B3D400B9832E /* OnboardingScene.swift in Sources */,
 				D684E7C72AD6B82600EC2F3B /* ListItemView.swift in Sources */,
 				D68971912ADF772900D58243 /* ItemSpikesModel.swift in Sources */,
 			);
