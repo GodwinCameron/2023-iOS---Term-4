@@ -8,6 +8,22 @@
 import SwiftUI
 
 struct ItemScene: View {
+<<<<<<< HEAD
+=======
+    
+    @State var searchText = ""
+    @State private var showSettings: Bool = false
+    
+    var searchResult : [Item] {
+        if(searchText.isEmpty) {
+            return ItemData
+        } else{
+            return ItemData.filter{$0.name.contains(searchText)}
+        }
+    }
+    
+    
+>>>>>>> parent of 2a26f43... complete
     var body: some View {
             NavigationView{
                 ZStack{
@@ -18,6 +34,7 @@ struct ItemScene: View {
                             .bold()
                             .foregroundColor(.white)
                             .font(.title)
+<<<<<<< HEAD
                         ForEach(ItemData) { item in
                             ListItemView(item: item)
                                             }
@@ -27,6 +44,32 @@ struct ItemScene: View {
                     }
                 }
                 .accentColor(.white)
+=======
+                        ScrollView{
+                            ForEach(searchResult) { item in
+                                ListItemView(item: item)
+                            }
+                        }.searchable(text: $searchText)
+                            .padding(.vertical)
+                        HStack{
+                            Spacer()
+                            Button(action: {
+                                // Open Settings
+                                showSettings.toggle()
+                            }, label: {
+                                Label("Settings", systemImage: "gearshape")
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                            })
+                        }
+                        .frame(width: 350)
+                    }
+                }
+                .accentColor(.white)
+            }
+            .sheet(isPresented: $showSettings) {
+                SettingsView()
+>>>>>>> parent of 2a26f43... complete
             }
             .edgesIgnoringSafeArea(.all)
     }
