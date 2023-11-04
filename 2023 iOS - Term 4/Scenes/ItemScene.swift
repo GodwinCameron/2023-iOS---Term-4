@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ItemScene: View {
-<<<<<<< HEAD
-=======
     
     @State var searchText = ""
     @State private var showSettings: Bool = false
@@ -23,7 +21,6 @@ struct ItemScene: View {
     }
     
     
->>>>>>> parent of 2a26f43... complete
     var body: some View {
             NavigationView{
                 ZStack{
@@ -34,17 +31,6 @@ struct ItemScene: View {
                             .bold()
                             .foregroundColor(.white)
                             .font(.title)
-<<<<<<< HEAD
-                        ForEach(ItemData) { item in
-                            ListItemView(item: item)
-                                            }
-                        
-                        Spacer()
-                            .padding(.vertical)
-                    }
-                }
-                .accentColor(.white)
-=======
                         ScrollView{
                             ForEach(searchResult) { item in
                                 ListItemView(item: item)
@@ -69,7 +55,6 @@ struct ItemScene: View {
             }
             .sheet(isPresented: $showSettings) {
                 SettingsView()
->>>>>>> parent of 2a26f43... complete
             }
             .edgesIgnoringSafeArea(.all)
     }
