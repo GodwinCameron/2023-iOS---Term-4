@@ -224,6 +224,12 @@ let ItemData: [Item] = [
       description: "text",
       tips: "text",
       spikes: [ItemSpikes(icon: "itemIW", name: "Ironspike Whip", cost: 1100, stat: "Attack Damage")]),
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> parent of 2a26f43... complete
 
 
 ]
