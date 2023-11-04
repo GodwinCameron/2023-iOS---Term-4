@@ -9,14 +9,9 @@ import SwiftUI
 
 struct Splash: View {
     @State private var isActive = false
-    @AppStorage("isOnboarded") var isOnboarded: Bool = false
     var body: some View {
         if isActive {
-            if(isOnboarded){
-                ItemScene()
-            } else {
-                OnboardingScene()
-            }
+            ItemScene()
         } else {
             ZStack{
                 Color("AccentColor")

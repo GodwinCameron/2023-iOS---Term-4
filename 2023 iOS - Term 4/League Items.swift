@@ -8,7 +8,6 @@ import SwiftUI
 
 @main
 struct _2023_iOS_Term4: App {
-    @AppStorage("isOnboarded") var isOnboarded: Bool = false
     var body: some Scene {
         WindowGroup {
             Splash()
