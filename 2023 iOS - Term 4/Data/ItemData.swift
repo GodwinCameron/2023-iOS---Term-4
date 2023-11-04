@@ -12,7 +12,7 @@ let ItemData: [Item] = [
       cost: 3400,
       icon: "itemBT",
       path: "pathBT",
-      type: "Legendary",
+      type: "Lengendary",
       stats: [
         ItemStats(stat: "55 Attack Damage"),
         ItemStats(stat: "12% Life Steal"),
@@ -147,8 +147,8 @@ let ItemData: [Item] = [
  
  Item(name: "Eclipse",
       cost: 3200,
-      icon: "itemEcl",
-      path: "pathEcl",
+      icon: "itemEclipse",
+      path: "pathEclipse",
       type: "Mythic",
       stats: [
          ItemStats(stat: "+60 Attack Damage"),
@@ -165,8 +165,8 @@ let ItemData: [Item] = [
  
  Item(name: "Evenshroud",
       cost: 2800,
-      icon: "itemES",
-      path: "pathES",
+      icon: "itemEvenshroud",
+      path: "pathEvenshroud",
       type: "Mythic",
       stats: [
          ItemStats(stat: "+20 Ability Haste"),
@@ -184,8 +184,8 @@ let ItemData: [Item] = [
  
  Item(name: "Everfrost",
       cost: 3200,
-      icon: "itemEF",
-      path: "pathEF",
+      icon: "itemEverfrost",
+      path: "pathEverfrost",
       type: "Mythic",
       stats: [
          ItemStats(stat: "+70 Ability Power"),
@@ -205,8 +205,8 @@ let ItemData: [Item] = [
  
  Item(name: "Galeforce",
       cost: 3400,
-      icon: "itemGF",
-      path: "pathGF",
+      icon: "itemGaleforce",
+      path: "pathGaleforce",
       type: "Mythic",
       stats: [
          ItemStats(stat: "+50 Attack Damage"),
@@ -224,233 +224,6 @@ let ItemData: [Item] = [
       description: "text",
       tips: "text",
       spikes: [ItemSpikes(icon: "itemIW", name: "Ironspike Whip", cost: 1100, stat: "Attack Damage")]),
- 
- Item(name: "Goredrinker",
-       cost: 3200,
-       icon: "itemGD",
-       path: "pathGD",
-       type: "Mythic",
-       stats: [
-          ItemStats(stat: "+55 Attack Damage"),
-          ItemStats(stat: "+20 Ability Haste"),
-          ItemStats(stat: "+400 Health"),
-          ItemStats(stat: "+8% Omnivamp")
-       ],
-       uniquePassive: [
-          ItemPassive(name: "Thirsting Slash",
-                       passive: "Deal 175% base AD physical damage to enemies in a 450 radius centered around you.  Heal for 20% AD (+ 8% of your missing health) for each enemy champion hit (15 (reduced by ability haste) second cooldown)."),
-          ItemPassive(name: "Mythic Passive",
-                       passive: "Empowers each of your other Legendary items with 75 bonus health and 3 ablility haste.")
-       ],
-       description: "",
-       tips: "",
-       spikes: []
- ),
- Item(name: "Mercurial Scimitar",
-       cost: 3000,
-       icon: "itemMS",
-       path: "pathMS",
-       type: "Legendary",
-       stats: [
-          ItemStats(stat: "+40 Attack Damage"),
-          ItemStats(stat: "+50 Magic Resistance"),
-          ItemStats(stat: "+20% Critical Strike Chance")
-       ],
-       uniquePassive: [
-          ItemPassive(name: "Quicksilver",
-                       passive: "Removes all  crowd control debuffs (except  Airborne) from your champion and grants 50% bonus total movement speed and  ghosting for 1.5 seconds (90 second cooldown).")
-       ],
-       description: "",
-       tips: "",
-       spikes: []
- ),
- Item(name: "Archangel's Staff",
-       cost: 3000,
-       icon: "itemAA",
-       path: "pathAA",
-       type: "Legendary",
-       stats: [
-          ItemStats(stat: "+70 Ability Power"),
-          ItemStats(stat: "+10 Ability Haste"),
-          ItemStats(stat: "+200 Health"),
-          ItemStats(stat: "+500 Mana")
-       ],
-       uniquePassive: [
-          ItemPassive(name: "Awe",
-                       passive: "Grants ability power equal to 1% bonus mana."),
-          ItemPassive(name: "Mana Charge",
-                       passive: "Grants a charge every 8 seconds, up to 4 charges. Affecting an enemy or ally with an ability consumes a charge to grant 3 bonus mana, increased to 6 if they are a champion, up to a maximum of 360 bonus mana. Transforms into  Seraph's Embrace at 360 bonus mana.")
-       ],
-       description: "",
-       tips: "",
-       spikes: []
- ),
- Item(name: "Wit's End",
-       cost: 3200,
-       icon: "itemWE",
-       path: "pathWE",
-       type: "Legendary",
-       stats: [
-          ItemStats(stat: "+40 Attack Damage"),
-          ItemStats(stat: "+40 Magic Resistance"),
-          ItemStats(stat: "+40% Attack Speed")
-       ],
-       uniquePassive: [
-          ItemPassive(name: "Fray",
-                       passive: "Basic attacks deal 15 − 80 (based on level) bonus magic damage on-hit and grant you 20 bonus movement speed for 2 seconds.")
-       ],
-       description: "",
-       tips: "",
-       spikes: []
- ),
- Item(name: "Chempunk Chainsword",
-       cost: 2800,
-       icon: "itemCC",
-       path: "pathCC",
-       type: "Legendary",
-       stats: [
-          ItemStats(stat: "+55 Attack Damage"),
-          ItemStats(stat: "+25 Ability Haste"),
-          ItemStats(stat: "+250 Health")
-       ],
-       uniquePassive: [
-          ItemPassive(name: "Hackshorn",
-                       passive: "Dealing physical damage to enemy champions inflicts them with Grievous Wounds for 3 seconds.")
-       ],
-       description: "",
-       tips: "",
-       spikes: []
- ),
- Item(name: "Force of Nature",
-       cost: 2800,
-       icon: "itemFoN",
-       path: "pathFoN",
-       type: "Legendary",
-       stats: [
-          ItemStats(stat: "+60 Magic Resistance"),
-          ItemStats(stat: "+400 Health"),
-          ItemStats(stat: "+5% Movement Speed")
-       ],
-       uniquePassive: [
-          ItemPassive(name: "Absorb",
-                       passive: "Taking magic damage from champions grants a stack of Steadfast for 7 seconds, stacking up to 10 times with the duration refreshing on subsequent magic damage from them and whenever dealing damage to them. Becoming immobilized by an enemy champion grants 2 stacks and also refreshes the duration. Damaging basic attacks and spells per cast instance can only grant 1 stack of Steadfast every 1 second."),
-          ItemPassive(name: "Dissipate",
-                       passive: "While at 10 stacks of Steadfast, gain 10% bonus movement speed and 30 bonus magic resistance.")
-       ],
-       description: "",
-       tips: "",
-       spikes: []
- ),
- Item(name: "B.F. Sword", 
-      cost: 1300,
-      icon: "itemBF",
-      path: "itemBF",
-      type: "Basic",
-      stats: [
-        ItemStats(stat: "+40 Attack Damage"),
-        ItemStats(stat: ""),
-        ItemStats(stat: "")
-      ],
-      uniquePassive: [],
-      description: "",
-      tips: "",
-      spikes: []
-),
- 
- 
- Item(name: "Null-Magic Mantle",
-       cost: 450,
-       icon: "itemNMM",
-       path: "itemNMM",
-       type: "Basic",
-       stats: [
-          ItemStats(stat: "+25 Magic Resistance"),
-          ItemStats(stat: ""),
-          ItemStats(stat: "")
-       ],
-       uniquePassive: [],
-       description: "",
-       tips: "",
-       spikes: []
- ),
- Item(name: "Long Sword",
-       cost: 350,
-       icon: "itemLS",
-       path: "itemLS",
-       type: "Basic",
-       stats: [
-          ItemStats(stat: "+10 Attack Damage"),
-          ItemStats(stat: ""),
-          ItemStats(stat: "")
-       ],
-       uniquePassive: [],
-       description: "",
-       tips: "",
-       spikes: []
- ),
- Item(name: "Faerie Charm",
-       cost: 250,
-       icon: "itemFC",
-       path: "itemFC",
-       type: "Basic",
-       stats: [
-          ItemStats(stat: "+50% Base Mana Regeneration"),
-          ItemStats(stat: ""),
-          ItemStats(stat: "")
-       ],
-       uniquePassive: [],
-       description: "",
-       tips: "",
-       spikes: []
- ),
- Item(name: "Dagger",
-       cost: 300,
-       icon: "itemDag",
-       path: "itemDag",
-       type: "Basic",
-       stats: [
-          ItemStats(stat: "+12% Attack Speed"),
-          ItemStats(stat: ""),
-          ItemStats(stat: "")
-       ],
-       uniquePassive: [],
-       description: "",
-       tips: "",
-       spikes: []
- ),
- Item(name: "Cloak of Agility",
-       cost: 600,
-       icon: "itemCoA",
-       path: "itemCoA",
-       type: "Basic",
-       stats: [
-          ItemStats(stat: "+15% Critical Strike Chance"),
-          ItemStats(stat: ""),
-          ItemStats(stat: "")
-       ],
-       uniquePassive: [],
-       description: "",
-       tips: "",
-       spikes: []
- ),
- Item(name: "Blasting Wand",
-       cost: 850,
-       icon: "itemBW",
-       path: "itemBW",
-       type: "Basic",
-       stats: [
-          ItemStats(stat: "+40 Ability Power"),
-          ItemStats(stat: ""),
-          ItemStats(stat: "")
-       ],
-       uniquePassive: [],
-       description: "",
-       tips: "",
-       spikes: []
- )
-
-
-
 
 
 

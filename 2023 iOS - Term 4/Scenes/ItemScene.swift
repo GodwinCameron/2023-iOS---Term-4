@@ -10,21 +10,16 @@ import SwiftUI
 struct ItemScene: View {
     
     @State var searchText = ""
-    @State var filterName = ""
     @State private var showSettings: Bool = false
-
     
-    var filteredItems: [Item] {
-        if !searchText.isEmpty && !filterName.isEmpty {
-            return ItemData.filter { $0.name.contains(searchText) && $0.type.contains(filterName) }
-        } else if !searchText.isEmpty {
-            return ItemData.filter { $0.name.contains(searchText) }
-        } else if !filterName.isEmpty {
-            return ItemData.filter { $0.type.contains(filterName) }
-        } else {
+    var searchResult : [Item] {
+        if(searchText.isEmpty) {
             return ItemData
+        } else{
+            return ItemData.filter{$0.name.contains(searchText)}
         }
     }
+    
     
     var body: some View {
         
@@ -33,50 +28,16 @@ struct ItemScene: View {
                     Color("AccentColor")
                         .ignoresSafeArea()
                     VStack(alignment: .leading){
-                        HStack{
-                            Text("All Items:")
-                                .bold()
-                                .foregroundColor(.white)
-                                .font(.title)
-                            Spacer()
-                            VStack{
-                                Text("Sort by -")
-                                    .foregroundColor(.white)
-                                HStack{
-                                    Text("None")
-                                        .foregroundColor(.blue)
-                                        .font(.system(size: 12))
-                                        .onTapGesture {
-                                            filterName = ""
-                                        }
-                                    Text("Basic")
-                                        .foregroundColor(.blue)
-                                        .font(.system(size: 12))
-                                        .onTapGesture {
-                                            filterName = "Basic"
-                                        }
-                                    Text("Legendary")
-                                        .foregroundColor(.blue)
-                                        .font(.system(size: 12))
-                                        .onTapGesture {
-                                            filterName = "Legendary"
-                                        }
-                                    Text("Mythic")
-                                        .foregroundColor(.blue)
-                                        .font(.system(size: 12))
-                                        .onTapGesture {
-                                            filterName = "Mythic"
-                                        }
-                                }
-                            }
-                        }
-                        .frame(width: 350)
+                        Text("All Items:")
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(.title)
                         ScrollView{
-                            ForEach(filteredItems) { item in
+                            ForEach(searchResult) { item in
                                 ListItemView(item: item)
-                            } // For loop
-                            .searchable(text: $searchText)
-                        } // Scroll View
+                            }
+                        }.searchable(text: $searchText)
+                            .padding(.vertical)
                         HStack{
                             Spacer()
                             Button(action: {
@@ -86,13 +47,13 @@ struct ItemScene: View {
                                 Label("Settings", systemImage: "gearshape")
                                     .font(.headline)
                                     .foregroundColor(.white)
-                            }) // Button
-                        } // HStack
+                            })
+                        }
                         .frame(width: 350)
-                    } // VStack
-                } // ZStack
+                    }
+                }
                 .accentColor(.white)
-            } // Navigation View
+            }
             .sheet(isPresented: $showSettings) {
                 SettingsView()
             }
